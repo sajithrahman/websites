@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Projects — JK Roofs Craft, Coimbatore</title>
+<meta name="description" content="Explore completed roofing projects by JK Roofs Craft — industrial sheds, residential homes, warehouses and more across Coimbatore." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%230c0e12%22/><path d=%22M4 20 L10 11 L14 17 L19 8 L28 20%22 fill=%22none%22 stroke=%22%23c9a84c%22 stroke-width=%222.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<style>
+:root{
+  --midnight:#0c0e12;--dark:#161a1f;--dark-2:#1e2530;--dark-3:#252d38;
+  --gold:#c9a84c;--gold-light:#e2c97e;--gold-pale:rgba(201,168,76,0.12);
+  --white:#ffffff;--off-white:#f5f3ee;--muted:#8a96a0;--muted-2:#bcc4cc;
+  --line:rgba(255,255,255,0.08);--line-light:rgba(0,0,0,0.09);
+  --shell:1200px;--gutter:clamp(20px,4.4vw,60px);--radius:6px;--radius-lg:14px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --font-display:'Playfair Display',Georgia,serif;--font-body:'Inter','Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}*{margin:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--dark);background:var(--off-white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased;}
+img,svg{display:block;max-width:100%;}a{color:inherit;text-decoration:none;}
+ul{list-style:none;padding:0;}button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:700;line-height:1.08;}
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--gutter);}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px;}section{position:relative;}
+.label{display:inline-flex;align-items:center;gap:10px;font-size:11.5px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);}
+.label::before{content:'';width:28px;height:1.5px;background:var(--gold);}
+.label--dark{color:var(--dark-2);}.label--dark::before{background:var(--dark-2);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 32px;border-radius:var(--radius);font-weight:600;font-size:13.5px;letter-spacing:0.05em;text-transform:uppercase;white-space:nowrap;transition:all .35s var(--ease);border:1.5px solid transparent;}
+.btn svg{flex-shrink:0;transition:transform .3s var(--ease);}.btn:hover svg{transform:translate(3px,-3px);}
+.btn--gold{background:var(--gold);color:var(--midnight);}.btn--gold:hover{background:var(--gold-light);box-shadow:0 12px 30px rgba(201,168,76,0.35);}
+.btn--outline-light{border-color:rgba(255,255,255,0.45);color:#fff;}.btn--outline-light:hover{background:rgba(255,255,255,0.1);border-color:#fff;}
+.btn--dark{background:var(--midnight);color:#fff;}.btn--dark:hover{background:var(--dark-2);}
+/* TOP BAR */
+.topbar{background:#f4f1eb;color:#4a5568;font-size:12.5px;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.08);}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.topbar a{color:#4a5568;transition:color .2s;}.topbar a:hover{color:var(--gold,#c9a84c);}
+.topbar__left{display:flex;align-items:center;gap:20px;}.topbar__right{display:flex;align-items:center;gap:14px;}.topbar__right a{font-size:14px;color:#4a5568;}
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:box-shadow .3s;}
+.nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.1);}
+.nav__inner{display:flex;align-items:center;gap:32px;min-height:78px;}
+.nav__brand{display:flex;align-items:center;gap:12px;color:#fff;flex-shrink:0;}
+.nav__logo-icon{width:36px;height:36px;background:var(--gold-pale);border:1px solid rgba(201,168,76,0.3);border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.nav__brand-text strong{font-family:var(--font-display);font-size:20px;letter-spacing:0.02em;color:var(--ink,#1a1e24);display:block;line-height:1;}
+.nav__brand-text span{font-size:9px;letter-spacing:0.18em;color:var(--gold);font-weight:600;text-transform:uppercase;}
+.nav__links{display:flex;align-items:center;gap:clamp(20px,2.8vw,40px);margin-inline:auto;}
+.nav__link{font-size:13.5px;font-weight:500;color:#4a5568;letter-spacing:0.01em;position:relative;padding:4px 0;transition:color .2s;}
+.nav__link::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
+.nav__link:hover{color:#1a1e24;}.nav__link:hover::after{transform:scaleX(1);}
+.nav__actions{display:flex;align-items:center;gap:20px;flex-shrink:0;}
+.nav__phone-wrap{display:flex;flex-direction:column;align-items:flex-end;line-height:1.2;}
+.nav__phone-wrap span{font-size:10.5px;color:#4a5568;letter-spacing:0.06em;text-transform:uppercase;}
+.nav__phone-wrap a{font-size:15px;font-weight:600;color:#1a1e24;}.nav__phone-wrap a:hover{color:var(--gold);}
+.nav__toggle{display:none;padding:8px;color:#1a1e24;border-radius:4px;}.nav__toggle:hover{background:rgba(0,0,0,0.05);}
+@media(max-width:960px){.nav__links,.nav__actions .nav__phone-wrap{display:none;}.nav__toggle{display:inline-flex;}}
+.nav__sheet{display:none;flex-direction:column;padding:10px var(--gutter) 24px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);}
+.nav__sheet.is-open{display:flex;}
+.nav__sheet a{padding:14px 2px;font-size:16px;font-weight:500;border-bottom:1px solid rgba(0,0,0,0.08);color:#1a1e24;}
+.nav__sheet a:hover{color:var(--gold);}.nav__sheet .btn{margin-top:16px;justify-content:center;}
+/* PAGE HERO */
+.page-hero{background:#f4f1eb;color:var(--ink,#1c2027);padding-block:clamp(80px,14vh,140px) clamp(60px,10vh,100px);text-align:center;position:relative;overflow:hidden;border-bottom:1px solid rgba(0,0,0,0.08);}
+.page-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(201,168,76,0.12) 0%,transparent 65%);}
+.page-hero .label{justify-content:center;margin-bottom:20px;}
+.page-hero h1{font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:800;letter-spacing:-0.02em;color:#1c2027;}
+.page-hero p{margin-top:18px;font-size:17px;color:#4a5568;max-width:52ch;margin-inline:auto;}
+/* FILTERS */
+.filters{padding-block:32px;background:#fff;border-bottom:1px solid var(--line-light);}
+.filters__row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.filter-btn{padding:10px 22px;border-radius:100px;font-size:13px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;border:1.5px solid rgba(0,0,0,0.12);color:var(--dark);transition:all .3s;}
+.filter-btn:hover,.filter-btn.is-active{background:var(--gold);border-color:var(--gold);color:var(--midnight);}
+/* PROJECTS GRID */
+.projects-section{padding-block:clamp(64px,10vh,108px);}
+.proj__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.proj__card{border-radius:var(--radius-lg);overflow:hidden;background:#fff;color:var(--ink,#1a1e24);box-shadow:0 4px 16px rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.07);transition:transform .4s var(--ease),box-shadow .4s;}
+.proj__card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,0.13);border-color:rgba(201,168,76,0.3);}
+.proj__card:hover .proj__card__img img{transform:scale(1.05);}
+.proj__card__img{
+  height:240px;overflow:hidden;position:relative;
+  background:linear-gradient(135deg,var(--dark-2),var(--dark-3));
+  display:flex;align-items:center;justify-content:center;
+}
+.proj__card__img i{font-size:3rem;color:var(--gold);opacity:0.5;}
+.proj__card__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(12,14,18,0.85) 0%,transparent 55%);opacity:0;transition:opacity .4s;}
+.proj__card:hover .proj__card__overlay{opacity:1;}
+.proj__card__body{padding:26px 24px 28px;}
+.proj__card__tag{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold,#c9a84c);margin-bottom:10px;}
+.proj__card h3{font-family:var(--font-display);font-size:20px;color:var(--ink,#1a1e24);margin-bottom:8px;}
+.proj__card p{font-size:14px;color:#4a5568;line-height:1.65;}
+.proj__card__meta{display:flex;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(0,0,0,0.08);font-size:12px;color:#8a96a0;}
+.proj__card__meta span{display:flex;align-items:center;gap:5px;}
+.proj__card__meta i{color:var(--gold);font-size:11px;}
+/* CTA BAND */
+.cta-band{background:#ede9e0;padding-block:clamp(72px,11vh,120px);border-top:1px solid rgba(0,0,0,0.08);position:relative;overflow:hidden;}
+.cta-band::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.18) 0%,transparent 70%);}
+.cta-band__inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:32px;}
+.cta-band h2{font-size:clamp(1.8rem,3.2vw,2.6rem);color:#1c2027;max-width:16ch;}
+.cta-band p{margin-top:12px;color:#4a5568;font-size:16px;max-width:44ch;}
+.cta-band__actions{display:flex;flex-wrap:wrap;gap:14px;flex-shrink:0;}
+/* FOOTER */
+footer{background:#f4f1eb;color:#4a5568;padding-block:56px 28px;border-top:1px solid rgba(0,0,0,0.08);}
+.ftr__top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid rgba(0,0,0,0.09);}
+.ftr__brand strong{font-family:var(--font-display);font-size:22px;color:#1c2027;display:block;margin-bottom:6px;}
+.ftr__brand .ftr__tagline{font-size:13.5px;max-width:30ch;margin-top:14px;line-height:1.65;color:#4a5568;}
+.ftr__social{display:flex;gap:12px;margin-top:22px;}
+.ftr__social a{width:36px;height:36px;border-radius:6px;border:1px solid rgba(0,0,0,0.1);background:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;color:#4a5568;transition:all .3s;}
+.ftr__social a:hover{background:var(--gold,#c9a84c);color:#fff;border-color:var(--gold,#c9a84c);}
+.ftr__col h4{font-size:12px;font-weight:700;color:#1c2027;margin-bottom:18px;letter-spacing:0.1em;text-transform:uppercase;}
+.ftr__col a,.ftr__col span{display:block;font-size:13.5px;margin-bottom:10px;color:#4a5568;transition:color .25s;}
+.ftr__col a:hover{color:var(--gold,#c9a84c);}
+.ftr__col .ftr__contact-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px;}
+.ftr__col .ftr__contact-item i{color:var(--gold);margin-top:2px;font-size:13px;}
+.ftr__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:22px;font-size:12px;color:#6b7280;border-top:1px solid rgba(0,0,0,0.08);}
+.ftr__bottom a{color:var(--muted);transition:color .2s;}.ftr__bottom a:hover{color:var(--gold);}
+@media(max-width:960px){.proj__grid{grid-template-columns:repeat(2,1fr);}.ftr__top{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.proj__grid{grid-template-columns:1fr;}.ftr__top{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar__inner shell">
+    <div class="topbar__left">
+      <span><i class="fas fa-envelope" style="color:var(--gold);margin-right:6px"></i><a href="mailto:hello@jkroofscraft.in">hello@jkroofscraft.in</a></span>
+      <span><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px"></i>Iruttuppallam, Coimbatore</span>
+    </div>
+    <div class="topbar__right">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="nav__inner shell">
+    <a class="nav__brand" href="index.html">
+      <div class="nav__logo-icon" style="background:var(--night,#0c0e12);width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17 L9 8 L13 14 L18 6 L21 17" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <div class="nav__brand-text"><strong>JK Roofs Craft</strong><span>Premium Roofing Solutions</span></div>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="gallery.html">Gallery</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <div class="nav__phone-wrap"><span>Call Us</span><a href="tel:+919876543210">+91 98765 43210</a></div>
+      <a class="btn btn--gold" href="enquiry.html">Get a Quote <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="nav__sheet" id="navSheet">
+    <a href="index.html">Home</a><a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+    <a class="btn btn--gold" href="enquiry.html">Get a Quote</a>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="shell">
+    <div class="label" data-aos="fade-up">Our Portfolio</div>
+    <h1 data-aos="fade-up" data-aos-delay="80">Completed Projects</h1>
+    <p data-aos="fade-up" data-aos-delay="160">From single-storey homes to 40,000 sq ft industrial sheds — a selection of roofing work we're proud to stand behind.</p>
+  </div>
+</section>
+
+<div class="filters">
+  <div class="shell filters__row">
+    <button class="filter-btn is-active" data-filter="all">All Projects</button>
+    <button class="filter-btn" data-filter="industrial">Industrial</button>
+    <button class="filter-btn" data-filter="residential">Residential</button>
+    <button class="filter-btn" data-filter="commercial">Commercial</button>
+  </div>
+</div>
+
+<section class="projects-section">
+  <div class="shell">
+    <div class="proj__grid" id="projectGrid">
+
+      <div class="proj__card" data-category="industrial" data-aos="fade-up" data-aos-delay="0">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=700&q=80" alt="Industrial shed roofing" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Industrial</div>
+          <h3>Textile Mill Shed — Tiruppur</h3>
+          <p>Long-span trapezoidal roofing for a 28,000 sq ft spinning mill. Galvanized steel, engineered for load.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>28,000 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>Trapezoidal Pro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card" data-category="residential" data-aos="fade-up" data-aos-delay="80">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=700&q=80" alt="Heritage bungalow roofing" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Residential</div>
+          <h3>Heritage Bungalow Re-roof — Coimbatore</h3>
+          <p>Full re-roofing with tile-form steel sheets in heritage Terracotta — matching the original clay tile silhouette.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>3,200 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>Tile-Form</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card" data-category="commercial" data-aos="fade-up" data-aos-delay="160">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?auto=format&fit=crop&w=700&q=80" alt="Commercial logistics hub" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Commercial</div>
+          <h3>Logistics Hub — Erode</h3>
+          <p>PUF-insulated sandwich panels for a temperature-controlled logistics facility requiring consistent interior conditions.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>12,400 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>ThermoShield</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card" data-category="industrial" data-aos="fade-up" data-aos-delay="0">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=700&q=80" alt="Poultry farm roofing" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Industrial</div>
+          <h3>Poultry Farm Complex — Pollachi</h3>
+          <p>Insulated roofing for four shed blocks totalling 18,000 sq ft, with ridge vents for controlled ventilation.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>18,000 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>ThermoShield + Ridge Kit</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card" data-category="residential" data-aos="fade-up" data-aos-delay="80">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1627915045107-3fde32ae4ab7?auto=format&fit=crop&w=700&q=80" alt="Luxury villa standing seam" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Residential — Premium</div>
+          <h3>Luxury Villa — Ooty</h3>
+          <p>Standing seam roofing in Slate Grey for a premium hillside villa — concealed-fix ribs, no exposed fasteners.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>4,800 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>Standing Seam</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="proj__card" data-category="commercial" data-aos="fade-up" data-aos-delay="160">
+        <div class="proj__card__img" style="height:240px;overflow:hidden;position:relative"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=700&q=80" alt="Showroom complex roofing" style="width:100%;height:100%;object-fit:cover;transition:transform .5s"><div class="proj__card__overlay"></div></div>
+        <div class="proj__card__body">
+          <div class="proj__card__tag">Commercial</div>
+          <h3>Showroom Complex — Coimbatore</h3>
+          <p>Classic corrugated profile in Ocean Blue for a multi-unit commercial showroom strip with canopy extensions.</p>
+          <div class="proj__card__meta">
+            <span><i class="fas fa-ruler-combined"></i>6,600 sq ft</span>
+            <span><i class="fas fa-layer-group"></i>Classic Corrugated</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="shell cta-band__inner">
+    <div data-aos="fade-right">
+      <h2>Have a project in mind?</h2>
+      <p>Tell us the scale and type — we'll put together a quote and a recommended profile within one working day.</p>
+    </div>
+    <div class="cta-band__actions" data-aos="fade-left" data-aos-delay="100">
+      <a class="btn btn--gold" href="enquiry.html">Start Your Enquiry <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn--outline-gold" href="contact.html" style="border-color:rgba(201,168,76,0.4);color:var(--gold,#c9a84c)">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <strong>JK Roofs Craft</strong>
+        <span style="font-size:10px;letter-spacing:0.12em;color:var(--muted);text-transform:uppercase">Premium Roofing Solutions</span>
+        <p class="ftr__tagline">Steel roofing sheets, roll-formed in Coimbatore for homes, warehouses and everything between.</p>
+        <div class="ftr__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="ftr__col">
+        <h4>Products</h4>
+        <a href="index.html#products">Trapezoidal Pro</a>
+        <a href="index.html#products">Classic Corrugated</a>
+        <a href="index.html#products">Standing Seam</a>
+        <a href="index.html#products">ThermoShield Panel</a>
+      </div>
+      <div class="ftr__col">
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="index.html#why">Why Us</a>
+      </div>
+      <div class="ftr__col">
+        <h4>Contact</h4>
+        <div class="ftr__contact-item"><i class="fas fa-phone-alt"></i><a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="ftr__contact-item"><i class="fas fa-envelope"></i><a href="mailto:hello@jkroofscraft.in">hello@jkroofscraft.in</a></div>
+        <div class="ftr__contact-item"><i class="fas fa-map-marker-alt"></i><span>Iruttuppallam, Coimbatore, TN 641114</span></div>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <span>© 2026 JK Roofs Craft. All rights reserved.</span>
+      <span>Designed with precision for excellence.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({once:true,offset:60,duration:700});
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+const toggle=document.getElementById('navToggle'),sheet=document.getElementById('navSheet');
+toggle.addEventListener('click',()=>{const o=sheet.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(o));document.body.style.overflow=o?'hidden':'';});
+sheet.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{sheet.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');document.body.style.overflow='';}));
+
+// Filter
+const filterBtns=document.querySelectorAll('.filter-btn');
+const cards=document.querySelectorAll('.proj__card');
+filterBtns.forEach(btn=>btn.addEventListener('click',()=>{
+  filterBtns.forEach(b=>b.classList.remove('is-active'));
+  btn.classList.add('is-active');
+  const f=btn.dataset.filter;
+  cards.forEach(card=>{
+    const show=f==='all'||card.dataset.category===f;
+    card.style.display=show?'':'none';
+  });
+}));
+</script>
+</body>
+</html>

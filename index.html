@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JK Roofs Craft — Premium Steel Roofing, Coimbatore</title>
+<meta name="description" content="JK Roofs Craft — Premium colour-coated and galvanized steel roofing sheets, roll-formed to spec for homes, warehouses and industrial sheds across Coimbatore." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><rect width=%2232%22 height=%2232%22 rx=%226%22 fill=%22%23c9a84c%22/><path d=%22M4 20 L10 11 L14 17 L19 8 L28 20%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%222.4%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,600;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<style>
+/* ======= TOKENS ======= */
+:root{
+  --ink:#1c2027;
+  --ink-mid:#4a5568;
+  --ink-soft:#6b7280;
+  --gold:#c9a84c;
+  --gold-dark:#a8882c;
+  --gold-light:#e2c97e;
+  --gold-pale:rgba(201,168,76,0.1);
+  --gold-border:rgba(201,168,76,0.3);
+  --white:#ffffff;
+  --cream:#faf8f4;          /* warm page bg */
+  --cream-2:#f4f1eb;        /* alt section */
+  --cream-3:#ede9e0;        /* deeper alt */
+  --border:rgba(0,0,0,0.08);
+  --border-gold:rgba(201,168,76,0.25);
+  --shadow-xs:0 1px 6px rgba(0,0,0,0.05);
+  --shadow-sm:0 3px 14px rgba(0,0,0,0.07);
+  --shadow-md:0 8px 32px rgba(0,0,0,0.1);
+  --shadow-lg:0 20px 60px rgba(0,0,0,0.13);
+  --shell:1200px;
+  --gutter:clamp(20px,4.4vw,64px);
+  --r:8px;
+  --r-lg:16px;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+  --fh:'Playfair Display',Georgia,serif;
+  --fb:'Inter','Segoe UI',sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;}
+*{margin:0;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{font-family:var(--fb);color:var(--ink);background:var(--cream);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;object-fit:cover;}
+svg{display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;padding:0;}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;}
+h1,h2,h3,h4{font-family:var(--fh);line-height:1.1;}
+.shell{width:100%;max-width:var(--shell);margin-inline:auto;padding-inline:var(--gutter);}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px;}
+section{position:relative;}
+
+/* ======= LABEL ======= */
+.label{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:11px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);
+}
+.label::before{content:'';width:26px;height:1.5px;background:var(--gold);}
+
+/* ======= BUTTONS ======= */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 30px;border-radius:var(--r);font-weight:600;font-size:13px;
+  letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;
+  transition:all .35s var(--ease);border:1.5px solid transparent;cursor:pointer;
+}
+.btn i,.btn svg{flex-shrink:0;transition:transform .3s var(--ease);}
+.btn:hover i,.btn:hover svg{transform:translate(3px,-3px);}
+.btn--gold{background:var(--gold);color:#fff;}
+.btn--gold:hover{background:var(--gold-dark);box-shadow:0 12px 30px rgba(201,168,76,0.4);}
+.btn--ink{background:var(--ink);color:#fff;}
+.btn--ink:hover{background:#2c333e;box-shadow:0 12px 28px rgba(28,32,39,0.28);}
+.btn--outline{border-color:var(--border);color:var(--ink);}
+.btn--outline:hover{border-color:var(--gold);color:var(--gold);}
+.btn--outline-gold{border-color:var(--gold-border);color:var(--gold);}
+.btn--outline-gold:hover{background:var(--gold);color:#fff;}
+
+/* ======= TOP BAR (cream, no black) ======= */
+.topbar{
+  background:var(--cream-2);
+  border-bottom:1px solid var(--border);
+  font-size:12.5px;padding:8px 0;
+}
+.topbar__inner{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.topbar a{color:var(--ink-mid);transition:color .2s;}
+.topbar a:hover{color:var(--gold);}
+.topbar__left{display:flex;align-items:center;gap:20px;color:var(--ink-soft);}
+.topbar__right{display:flex;align-items:center;gap:14px;}
+.topbar__right a{font-size:14px;color:var(--ink-mid);}
+@media(max-width:640px){.topbar__left span:nth-child(2){display:none;}}
+
+/* ======= NAV (pure white) ======= */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,0.98);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+  transition:box-shadow .3s;
+}
+.nav.scrolled{box-shadow:0 4px 24px rgba(0,0,0,0.09);}
+.nav__inner{display:flex;align-items:center;gap:32px;min-height:76px;}
+.nav__brand{display:flex;align-items:center;gap:12px;flex-shrink:0;}
+.nav__logo{
+  width:38px;height:38px;border-radius:8px;
+  background:var(--gold);display:flex;align-items:center;justify-content:center;
+}
+.nav__brand-text strong{font-family:var(--fh);font-size:19px;color:var(--ink);display:block;line-height:1;}
+.nav__brand-text span{font-size:9px;letter-spacing:0.18em;color:var(--gold);font-weight:600;text-transform:uppercase;}
+.nav__links{display:flex;align-items:center;gap:clamp(20px,2.6vw,38px);margin-inline:auto;}
+.nav__link{font-size:14px;font-weight:500;color:var(--ink-mid);position:relative;padding:4px 0;transition:color .2s;}
+.nav__link::after{content:'';position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);}
+.nav__link:hover{color:var(--ink);}
+.nav__link:hover::after{transform:scaleX(1);}
+.nav__actions{display:flex;align-items:center;gap:18px;flex-shrink:0;}
+.nav__phone-wrap{display:flex;flex-direction:column;align-items:flex-end;line-height:1.25;}
+.nav__phone-wrap span{font-size:10px;color:var(--ink-soft);letter-spacing:0.06em;text-transform:uppercase;}
+.nav__phone-wrap a{font-size:14.5px;font-weight:700;color:var(--ink);transition:color .2s;}
+.nav__phone-wrap a:hover{color:var(--gold);}
+.nav__toggle{display:none;padding:8px;color:var(--ink);border-radius:6px;}
+.nav__toggle:hover{background:var(--cream-2);}
+@media(max-width:960px){
+  .nav__links,.nav__actions .nav__phone-wrap{display:none;}
+  .nav__toggle{display:inline-flex;}
+}
+.nav__sheet{display:none;flex-direction:column;padding:10px var(--gutter) 22px;background:#fff;border-bottom:1px solid var(--border);}
+.nav__sheet.is-open{display:flex;}
+.nav__sheet a{padding:14px 0;font-size:16px;font-weight:500;border-bottom:1px solid var(--border);color:var(--ink);}
+.nav__sheet a:hover{color:var(--gold);}
+.nav__sheet .btn{margin-top:16px;justify-content:center;}
+
+/* ======= HERO — Full Width Slider (Mount Roof Style) ======= */
+.hero{
+  position:relative;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:var(--cream-2);
+}
+.hero__slider{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+}
+.hero__slide-img{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out, transform 6s linear;
+  transform:scale(1.02);
+}
+.hero__slide-img.is-active{
+  opacity:1;
+  transform:scale(1.08);
+}
+.hero__slide-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.hero__overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0) 100%);
+  z-index:1;
+}
+.hero__content{
+  position:relative;
+  z-index:2;
+  width:100%;
+}
+.hero__eyebrow{margin-bottom:22px;}
+.hero__title{
+  font-size:clamp(3rem, 5.5vw, 4.8rem);
+  font-weight:800;
+  letter-spacing:-0.02em;
+  color:var(--ink);
+  line-height:1.05;
+  max-width:18ch;
+  text-shadow:0 4px 20px rgba(255,255,255,0.8);
+}
+.hero__title em{color:var(--gold);font-style:italic;}
+.hero__sub{
+  margin-top:22px;
+  max-width:46ch;
+  font-size:18px;
+  color:var(--ink-mid);
+  line-height:1.65;
+  font-weight:500;
+}
+.hero__cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:40px;}
+.hero__stats{
+  display:flex;
+  gap:clamp(24px, 4vw, 56px);
+  flex-wrap:wrap;
+  margin-top:60px;
+  padding-top:32px;
+  border-top:1px solid rgba(0,0,0,0.12);
+  max-width:800px;
+}
+.hero__stat strong{
+  display:block;
+  font-family:var(--fh);
+  font-size:clamp(2.6rem, 5vw, 4rem);
+  font-weight:800;
+  color:var(--gold);
+  line-height:1;
+  margin-bottom:4px;
+}
+.hero__stat > span{
+  font-size:13px;
+  color:var(--ink);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  font-weight:700;
+}
+.hero__controls{
+  position:absolute;
+  bottom:40px;
+  right:var(--gutter);
+  z-index:3;
+  display:flex;
+  gap:12px;
+}
+.hero__dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(0,0,0,0.3);
+  border:2px solid transparent;
+  cursor:pointer;
+  transition:all .3s;
+}
+.hero__dot.is-active{
+  background:var(--gold);
+  border-color:#fff;
+  transform:scale(1.2);
+  box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+@media(max-width:900px){
+  .hero{min-height:75vh;}
+  .hero__overlay{background:linear-gradient(to top, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.4) 100%);}
+}
+
+/* ======= TRUST BAR ======= */
+.trust{background:var(--cream-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding-block:18px;}
+.trust__row{display:flex;align-items:center;gap:clamp(14px,2.5vw,36px);flex-wrap:wrap;justify-content:center;}
+.trust__item{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--ink-mid);}
+.trust__item i{color:var(--gold);font-size:14px;}
+.trust__sep{width:1px;height:18px;background:var(--border);}
+@media(max-width:640px){.trust__sep{display:none;}}
+
+/* ======= SEC HEADING ======= */
+.sec-head{margin-bottom:clamp(36px,5vh,56px);}
+.sec-head .label{margin-bottom:14px;}
+.sec-head h2{font-size:clamp(2rem,3.5vw,2.9rem);color:var(--ink);max-width:22ch;}
+.sec-head p{margin-top:14px;max-width:54ch;color:var(--ink-mid);font-size:15.5px;line-height:1.72;}
+.sec-head--center{text-align:center;display:flex;flex-direction:column;align-items:center;}
+.sec-head--center h2{max-width:100%;}
+
+/* ======= ABOUT ======= */
+.about{background:var(--white);padding-block:clamp(80px,12vh,128px);border-top:1px solid var(--border);}
+.about__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,7vw,88px);align-items:center;}
+.about__body .label{margin-bottom:16px;}
+.about__body h2{font-size:clamp(2rem,3.5vw,2.9rem);color:var(--ink);}
+.about__lead{margin-top:20px;font-size:17px;color:var(--ink);line-height:1.72;max-width:50ch;}
+.about__body p{margin-top:14px;color:var(--ink-mid);font-size:15px;max-width:52ch;line-height:1.75;}
+.about__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px;}
+.about__img-col{position:relative;}
+.about__img{width:100%;height:500px;border-radius:var(--r-lg);box-shadow:var(--shadow-lg);}
+.about__badge{
+  position:absolute;bottom:-22px;left:-22px;
+  background:var(--gold);color:#fff;
+  border-radius:var(--r-lg);padding:22px 28px;
+  font-family:var(--fh);box-shadow:0 16px 40px rgba(201,168,76,0.4);
+}
+.about__badge strong{display:block;font-size:2.4rem;font-weight:800;line-height:1;}
+.about__badge span{font-size:12px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;display:block;margin-top:3px;}
+.about__img-accent{
+  position:absolute;top:-18px;right:-18px;
+  width:130px;height:130px;border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:var(--shadow-md);border:4px solid #fff;
+}
+
+/* ======= STATS ======= */
+.stats{background:var(--cream-2);padding-block:clamp(56px,9vh,96px);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;}
+.stats__item{background:var(--white);padding:40px 32px;text-align:center;transition:background .3s;}
+.stats__item:hover{background:var(--cream-3);}
+.stats__num{font-family:var(--fh);font-size:clamp(2.2rem,3.8vw,3.2rem);font-weight:800;color:var(--gold);line-height:1;}
+.stats__label{margin-top:10px;font-size:12.5px;color:var(--ink-soft);font-weight:500;letter-spacing:0.05em;text-transform:uppercase;}
+
+/* ======= PRODUCTS ======= */
+.products{background:var(--cream);padding-block:clamp(80px,12vh,128px);}
+.products__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.p-card{
+  background:var(--white);border-radius:var(--r-lg);overflow:hidden;
+  border:1px solid var(--border);box-shadow:var(--shadow-xs);
+  display:flex;flex-direction:column;
+  transition:transform .38s var(--ease),box-shadow .38s,border-color .3s;
+}
+.p-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold-border);}
+.p-card__img{height:200px;overflow:hidden;position:relative;}
+.p-card__img img{width:100%;height:100%;transition:transform .6s var(--ease);}
+.p-card:hover .p-card__img img{transform:scale(1.06);}
+.p-card__tag-pill{position:absolute;bottom:12px;left:14px;background:var(--gold);color:#fff;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 10px;border-radius:100px;}
+.p-card__body{padding:24px 24px 28px;flex:1;display:flex;flex-direction:column;}
+.p-card__body h3{font-family:var(--fh);font-size:19px;color:var(--ink);margin-bottom:8px;}
+.p-card__body p{font-size:14.5px;color:var(--ink-mid);flex:1;line-height:1.7;}
+.p-card__link{margin-top:18px;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--gold);letter-spacing:0.08em;text-transform:uppercase;}
+.p-card__link i{transition:transform .3s var(--ease);}
+.p-card:hover .p-card__link i{transform:translate(3px,-3px);}
+
+/* ======= SOLUTIONS — IMAGE CARDS ======= */
+.solutions{background:var(--white);padding-block:clamp(80px,12vh,128px);border-top:1px solid var(--border);}
+.sol__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:clamp(36px,5vh,56px);}
+.sol__card{
+  border-radius:var(--r-lg);overflow:hidden;position:relative;
+  min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;
+  box-shadow:var(--shadow-md);transition:transform .4s var(--ease),box-shadow .4s;
+}
+.sol__card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);}
+.sol__card__bg{position:absolute;inset:0;}
+.sol__card__bg img{width:100%;height:100%;}
+.sol__card__overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(28,32,39,0.88) 0%,rgba(28,32,39,0.2) 65%,rgba(28,32,39,0) 100%);
+  transition:background .4s;
+}
+.sol__card:hover .sol__card__overlay{background:linear-gradient(to top,rgba(28,32,39,0.94) 0%,rgba(28,32,39,0.35) 65%,rgba(28,32,39,0.06) 100%);}
+.sol__card__body{position:relative;z-index:2;padding:28px 30px;}
+.sol__card__num{font-family:var(--fh);font-size:2rem;font-weight:800;color:var(--gold);opacity:0.6;line-height:1;margin-bottom:6px;}
+.sol__card__body h3{font-family:var(--fh);font-size:21px;color:#fff;margin-bottom:8px;}
+.sol__card__body p{font-size:14px;color:rgba(255,255,255,0.78);line-height:1.68;margin-bottom:14px;}
+.sol__card__link{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase;}
+.sol__card__link i{transition:transform .3s var(--ease);}
+.sol__card:hover .sol__card__link i{transform:translate(4px,-4px);}
+
+/* ======= WHY US ======= */
+.why{background:var(--cream-2);padding-block:clamp(80px,12vh,128px);}
+.why__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.why__card{background:var(--white);border-radius:var(--r-lg);padding:34px 30px;border:1px solid var(--border);box-shadow:var(--shadow-xs);transition:border-color .3s,box-shadow .3s,transform .3s;}
+.why__card:hover{border-color:var(--gold-border);box-shadow:var(--shadow-md);transform:translateY(-4px);}
+.why__num{font-family:var(--fh);font-size:2.8rem;font-weight:800;color:var(--gold);opacity:0.22;line-height:1;margin-bottom:14px;}
+.why__card h3{font-family:var(--fh);font-size:19px;color:var(--ink);margin-bottom:10px;}
+.why__card p{font-size:14.5px;color:var(--ink-mid);line-height:1.75;}
+
+/* ======= COLOURS ======= */
+.colours{background:var(--white);padding-block:clamp(80px,12vh,128px);border-top:1px solid var(--border);}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.swatch{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow-xs);transition:transform .3s,box-shadow .3s;}
+.swatch:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.swatch__chip{height:96px;}
+.swatch__label{background:#fff;padding:13px 15px;}
+.swatch__label strong{display:block;font-size:13.5px;font-weight:600;color:var(--ink);}
+.swatch__label span{font-size:11.5px;color:var(--ink-soft);}
+
+/* ======= GALLERY PREVIEW ======= */
+.gallery-preview{background:var(--cream);padding-block:clamp(80px,12vh,128px);}
+.gp__grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:240px 240px;
+  gap:14px;
+  margin-top:clamp(36px,5vh,56px);
+}
+.gp__item{border-radius:var(--r-lg);overflow:hidden;position:relative;cursor:pointer;background:var(--cream-3);}
+.gp__item img{width:100%;height:100%;transition:transform .5s var(--ease);}
+.gp__item:hover img{transform:scale(1.06);}
+.gp__item--tall{grid-row:span 2;}
+.gp__item--wide{grid-column:span 2;}
+.gp__item__overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(28,32,39,0.6) 0%,transparent 55%);opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:18px;}
+.gp__item:hover .gp__item__overlay{opacity:1;}
+.gp__item__caption{color:#fff;font-size:13px;font-weight:600;}
+.gp__see-all{text-align:center;margin-top:32px;}
+
+/* ======= TESTIMONIALS ======= */
+.testi{background:var(--white);padding-block:clamp(80px,12vh,128px);border-top:1px solid var(--border);}
+.testi__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.testi__card{background:var(--cream-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:36px 34px;box-shadow:var(--shadow-xs);transition:border-color .3s,box-shadow .3s;}
+.testi__card:hover{border-color:var(--gold-border);box-shadow:var(--shadow-md);}
+.testi__stars{color:var(--gold);font-size:14px;margin-bottom:14px;letter-spacing:2px;}
+.testi__text{font-size:16px;color:var(--ink);line-height:1.75;font-style:italic;}
+.testi__who{margin-top:24px;display:flex;align-items:center;gap:14px;padding-top:18px;border-top:1px solid var(--border);}
+.testi__avatar{width:44px;height:44px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:17px;font-weight:700;flex-shrink:0;}
+.testi__who strong{display:block;font-size:14.5px;color:var(--ink);font-weight:600;}
+.testi__who span{font-size:12.5px;color:var(--ink-soft);}
+
+/* ======= CTA BAND — warm cream, NO black ======= */
+.cta-band{
+  background:var(--cream-3);
+  padding-block:clamp(80px,12vh,128px);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  position:relative;overflow:hidden;
+}
+.cta-band::before{
+  content:'';position:absolute;right:-120px;top:-120px;
+  width:480px;height:480px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,0.15) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cta-band__inner{position:relative;z-index:1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:36px;}
+.cta-band h2{font-size:clamp(1.9rem,3.2vw,2.8rem);color:var(--ink);max-width:20ch;}
+.cta-band p{margin-top:12px;font-size:16px;color:var(--ink-mid);max-width:48ch;}
+.cta-band__actions{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0;}
+
+/* ======= FOOTER — light, NO black ======= */
+footer{background:var(--cream-2);color:var(--ink-mid);padding-block:60px 28px;border-top:1px solid var(--border);}
+.ftr__top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;padding-bottom:44px;border-bottom:1px solid var(--border);}
+.ftr__brand strong{font-family:var(--fh);font-size:22px;color:var(--ink);display:block;}
+.ftr__brand-sub{font-size:10px;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;font-weight:700;margin-top:2px;display:block;}
+.ftr__brand p{font-size:13.5px;max-width:30ch;margin-top:14px;line-height:1.7;color:var(--ink-mid);}
+.ftr__social{display:flex;gap:10px;margin-top:20px;}
+.ftr__social a{width:36px;height:36px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:13.5px;color:var(--ink-mid);transition:all .3s;background:#fff;}
+.ftr__social a:hover{background:var(--gold);color:#fff;border-color:var(--gold);}
+.ftr__col h4{font-size:11.5px;font-weight:700;color:var(--ink);margin-bottom:18px;letter-spacing:0.12em;text-transform:uppercase;}
+.ftr__col a,.ftr__col span{display:block;font-size:13.5px;margin-bottom:10px;color:var(--ink-mid);transition:color .25s;}
+.ftr__col a:hover{color:var(--gold);}
+.ftr__contact-item{display:flex;align-items:flex-start;gap:9px;margin-bottom:12px;}
+.ftr__contact-item i{color:var(--gold);margin-top:2px;font-size:13px;flex-shrink:0;}
+.ftr__bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:22px;font-size:12px;color:var(--ink-soft);}
+.ftr__bottom a{color:var(--ink-mid);transition:color .2s;}
+.ftr__bottom a:hover{color:var(--gold);}
+
+/* ======= RESPONSIVE ======= */
+@media(max-width:1024px){
+  .about__grid{grid-template-columns:1fr;}
+  .about__img-col{order:-1;}
+  .about__img{height:380px;}
+  .gp__grid{grid-template-columns:repeat(2,1fr);grid-template-rows:auto;grid-auto-rows:200px;}
+  .gp__item--tall,.gp__item--wide{grid-row:span 1;grid-column:span 1;}
+  .ftr__top{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  .products__grid{grid-template-columns:repeat(2,1fr);}
+  .sol__grid{grid-template-columns:1fr;}
+  .why__grid{grid-template-columns:1fr;gap:18px;}
+  .swatches{grid-template-columns:repeat(2,1fr);}
+  .testi__grid{grid-template-columns:1fr;}
+  .stats__grid{grid-template-columns:repeat(2,1fr);}
+}
+@media(max-width:540px){
+  .products__grid{grid-template-columns:1fr;}
+  .ftr__top{grid-template-columns:1fr;}
+  .stats__grid{grid-template-columns:1fr 1fr;}
+  .gp__grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR (cream/light) -->
+<div class="topbar">
+  <div class="topbar__inner shell">
+    <div class="topbar__left">
+      <span><i class="fas fa-envelope" style="color:var(--gold);margin-right:6px"></i><a href="mailto:hello@jkroofscraft.in">hello@jkroofscraft.in</a></span>
+      <span><i class="fas fa-map-marker-alt" style="color:var(--gold);margin-right:6px"></i>Iruttuppallam, Coimbatore</span>
+    </div>
+    <div class="topbar__right">
+      <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav__inner shell">
+    <a class="nav__brand" href="index.html">
+      <div class="nav__logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 17L9 8L13 14L18 6L21 17" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="nav__brand-text">
+        <strong>JK Roofs Craft</strong>
+        <span>Premium Roofing Solutions</span>
+      </div>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="gallery.html">Gallery</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <div class="nav__phone-wrap">
+        <span>Call Us</span>
+        <a href="tel:+919876543210">+91 98765 43210</a>
+      </div>
+      <a class="btn btn--gold" href="enquiry.html">
+        Get a Quote
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <div class="nav__sheet" id="navSheet">
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--gold" href="enquiry.html">Get a Quote</a>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO — Full-Width Image Slider -->
+<section class="hero" id="heroSection">
+  <div class="hero__slider">
+    <div class="hero__slide-img is-active">
+      <img src="assets/images/Artboard-1.jpg" alt="Premium steel roofing" />
+    </div>
+    <div class="hero__slide-img">
+      <img src="assets/images/Artboard-1-copy.jpg" alt="Industrial warehouse roofing" />
+    </div>
+    <div class="hero__slide-img">
+      <img src="assets/images/Artboard-1-copy-2-1.jpg" alt="Residential roofing installation" />
+    </div>
+  </div>
+  
+  <div class="hero__overlay"></div>
+
+  <div class="hero__content shell">
+    <div class="hero__eyebrow label" id="heroLabel" data-aos="fade-up">Premium Roofing — Coimbatore</div>
+    <h1 class="hero__title" id="heroTitle" data-aos="fade-up" data-aos-delay="100">Crafting Roofs Built to <em>Last Generations</em></h1>
+    <p class="hero__sub" id="heroSub" data-aos="fade-up" data-aos-delay="200">Premium colour-coated and galvanized steel roofing sheets — roll-formed to your exact specifications for homes, warehouses and industrial sheds.</p>
+    
+    <div class="hero__cta" data-aos="fade-up" data-aos-delay="300">
+      <a class="btn btn--gold" href="enquiry.html">
+        Request a Quote
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a class="btn btn--outline" href="#products">Explore Products</a>
+    </div>
+    
+    <div class="hero__stats" data-aos="fade-up" data-aos-delay="400">
+      <div class="hero__stat"><strong><span class="count" data-target="18">18</span>+</strong><span>Years Exp.</span></div>
+      <div class="hero__stat"><strong><span class="count" data-target="1200">1200</span>+</strong><span>Roofs Done</span></div>
+      <div class="hero__stat"><strong><span class="count" data-target="40">40</span>+</strong><span>Colours</span></div>
+      <div class="hero__stat"><strong><span class="count" data-target="72">72</span> hrs</strong><span>Dispatch</span></div>
+    </div>
+  </div>
+
+  <div class="hero__controls">
+    <button class="hero__dot is-active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero__dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero__dot" data-slide="2" aria-label="Slide 3"></button>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust__row shell">
+    <div class="trust__item"><i class="fas fa-shield-alt"></i> ISO Certified Quality</div>
+    <div class="trust__sep"></div>
+    <div class="trust__item"><i class="fas fa-cut"></i> Cut-to-Length Precision</div>
+    <div class="trust__sep"></div>
+    <div class="trust__item"><i class="fas fa-truck"></i> 72-Hour Dispatch</div>
+    <div class="trust__sep"></div>
+    <div class="trust__item"><i class="fas fa-palette"></i> 40+ Colour Shades</div>
+    <div class="trust__sep"></div>
+    <div class="trust__item"><i class="fas fa-headset"></i> Expert Site Support</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="shell about__grid">
+    <div class="about__body" data-aos="fade-right" data-aos-duration="800">
+      <div class="label">About JK Roofs Craft</div>
+      <h2>Built by craftsmen, not a catalogue counter</h2>
+      <p class="about__lead">JK Roofs Craft runs its own roll-forming line in Coimbatore — every sheet is cut to your exact length, not the nearest standard size.</p>
+      <p>We stock galvanized (GI) and colour-coated (PPGI) steel in a full range of gauges, for everything from a home extension to a 40,000 sq ft industrial shed.</p>
+      <p>Our coatings are chosen for South India's climate: extreme heat, coastal humidity, and heavy monsoon rains. That's the job the sheet has to do before it does anything else.</p>
+      <div class="about__cta">
+        <a class="btn btn--ink" href="projects.html">View Our Projects <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn--outline" href="enquiry.html">Get a Quote</a>
+      </div>
+    </div>
+    <div class="about__img-col" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
+      <img class="about__img" src="assets/images/Artboard-1.jpg" alt="Roofing construction in progress" />
+      <div class="about__img-accent">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=260&q=80" alt="Roofing close-up detail" />
+      </div>
+      <div class="about__badge"><strong>18+</strong><span>Years of Excellence</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats" id="stats">
+  <div class="shell">
+    <div class="stats__grid">
+      <div class="stats__item" data-aos="fade-up" data-aos-delay="0"><div class="stats__num"><span class="count-stat" data-target="18">18</span>+</div><div class="stats__label">Years in Business</div></div>
+      <div class="stats__item" data-aos="fade-up" data-aos-delay="80"><div class="stats__num"><span class="count-stat" data-target="1200">1200</span>+</div><div class="stats__label">Roofs Supplied</div></div>
+      <div class="stats__item" data-aos="fade-up" data-aos-delay="160"><div class="stats__num"><span class="count-stat" data-target="40">40</span>+</div><div class="stats__label">Colour Shades</div></div>
+      <div class="stats__item" data-aos="fade-up" data-aos-delay="240"><div class="stats__num"><span class="count-stat" data-target="72">72</span> hrs</div><div class="stats__label">Avg. Dispatch Time</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="shell">
+    <div class="sec-head" data-aos="fade-up">
+      <div class="label">Our Product Range</div>
+      <h2>Six profiles, one precision line</h2>
+      <p>Available in galvanized or colour-coated steel, cut to your exact rafter length.</p>
+    </div>
+    <div class="products__grid">
+      <div class="p-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="p-card__img"><img src="assets/images/Traf-345-332.1jpg.jpg" alt="Industrial warehouse roofing" /><div class="p-card__tag-pill">Industrial</div></div>
+        <div class="p-card__body"><h3>Trapezoidal Pro</h3><p>High-rib profile for long spans — warehouses, sheds and factory roofs, engineered to load.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="p-card" data-aos="fade-up" data-aos-delay="70">
+        <div class="p-card__img"><img src="assets/images/Traf-345-332.2jpg.jpg" alt="Residential home roofing" /><div class="p-card__tag-pill">Residential</div></div>
+        <div class="p-card__body"><h3>Classic Corrugated</h3><p>Lightweight, economical wave profile — the standard choice for home re-roofing and outbuildings.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="p-card" data-aos="fade-up" data-aos-delay="140">
+        <div class="p-card__img"><img src="assets/images/01.1png-2.png" alt="Standing seam premium roof" /><div class="p-card__tag-pill">Premium</div></div>
+        <div class="p-card__body"><h3>Standing Seam</h3><p>Concealed-fix ribs, no exposed screws — a cleaner premium line for high-end homes and pavilions.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="p-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="p-card__img"><img src="assets/images/02-2.png" alt="Heritage tile-look roofing" /><div class="p-card__tag-pill">Heritage</div></div>
+        <div class="p-card__body"><h3>Tile-Form</h3><p>Steel sheet pressed to a clay-tile silhouette — the heritage look at a fraction of the dead load.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="p-card" data-aos="fade-up" data-aos-delay="70">
+        <div class="p-card__img"><img src="assets/images/03-2.png" alt="Insulated industrial panel" /><div class="p-card__tag-pill">Insulated</div></div>
+        <div class="p-card__body"><h3>ThermoShield Panel</h3><p>PUF-insulated sandwich panel for cold storage, poultry farms and temperature-controlled facilities.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="p-card" data-aos="fade-up" data-aos-delay="140">
+        <div class="p-card__img"><img src="assets/images/PRoject-img-cont-1-ezgif.com-jpg-to-webp-converter.webp" alt="Roofing accessories" /><div class="p-card__tag-pill">Accessories</div></div>
+        <div class="p-card__body"><h3>Ridge &amp; Flashing Kit</h3><p>Ridge caps, valley flashing and end closures, colour-matched to your sheet for a fully weathertight finish.</p><a class="p-card__link" href="enquiry.html">Enquire Now <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="solutions" id="solutions">
+  <div class="shell">
+    <div class="sec-head sec-head--center" data-aos="fade-up">
+      <div class="label">Who We Serve</div>
+      <h2>One roofing line, four different solutions</h2>
+      <p>Homeowner, contractor, plant manager or dealer — the questions you bring us aren't the same, and neither are our answers.</p>
+    </div>
+    <div class="sol__grid">
+      <div class="sol__card" data-aos="fade-up" data-aos-delay="0">
+        <div class="sol__card__bg"><img src="assets/images/02-2.png" alt="Homeowner residential roofing" /></div>
+        <div class="sol__card__overlay"></div>
+        <div class="sol__card__body"><div class="sol__card__num">01</div><h3>Homeowners</h3><p>Compare shades, get a cut-to-length quote, and have sheets arrive ready to fit with no site trimming.</p><a class="sol__card__link" href="enquiry.html">Get a Home Quote <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="sol__card" data-aos="fade-up" data-aos-delay="80">
+        <div class="sol__card__bg"><img src="assets/images/03-2.png" alt="Contractors and fabricators" /></div>
+        <div class="sol__card__overlay"></div>
+        <div class="sol__card__body"><div class="sol__card__num">02</div><h3>Contractors &amp; Fabricators</h3><p>Bulk pricing, cut-to-length sheets, and drawings turned around fast. Trade accounts welcome.</p><a class="sol__card__link" href="enquiry.html">Talk Trade Pricing <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="sol__card" data-aos="fade-up" data-aos-delay="0">
+        <div class="sol__card__bg"><img src="assets/images/FQA.2jpg-1.jpg" alt="Industrial warehouse roofing" /></div>
+        <div class="sol__card__overlay"></div>
+        <div class="sol__card__body"><div class="sol__card__num">03</div><h3>Industrial &amp; Warehousing</h3><p>Long-span trapezoidal and insulated panels for sheds, cold storage and factories — on time, every time.</p><a class="sol__card__link" href="enquiry.html">Request a Site Visit <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+      <div class="sol__card" data-aos="fade-up" data-aos-delay="80">
+        <div class="sol__card__bg"><img src="assets/images/Traf-345-332.1jpg.jpg" alt="Dealer and distributor network" /></div>
+        <div class="sol__card__overlay"></div>
+        <div class="sol__card__body"><div class="sol__card__num">04</div><h3>Dealers &amp; Distributors</h3><p>Stock our range in your district with colour cards, samples, and reliable delivery scheduling.</p><a class="sol__card__link" href="enquiry.html">Become a Dealer <i class="fas fa-arrow-up-right-from-square" style="font-size:10px"></i></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="shell">
+    <div class="sec-head sec-head--center" data-aos="fade-up">
+      <div class="label">Why Choose Us</div>
+      <h2>What you're actually paying for</h2>
+      <p>Three things that separate a roof that just covers from one that performs for decades.</p>
+    </div>
+    <div class="why__grid">
+      <div class="why__card" data-aos="fade-up" data-aos-delay="0"><div class="why__num">01</div><h3>Coating Built for Salt Air</h3><p>Zinc-aluminium base coat chosen for coastal humidity and monsoon intensity — not a dry-climate spec sheet.</p></div>
+      <div class="why__card" data-aos="fade-up" data-aos-delay="100"><div class="why__num">02</div><h3>Cut to Your Rafter, Not a Size</h3><p>Roll-formed to the exact length you send us — fewer joints, less wastage, no site cutting in the rain.</p></div>
+      <div class="why__card" data-aos="fade-up" data-aos-delay="200"><div class="why__num">03</div><h3>Stocked &amp; Dispatched Locally</h3><p>Our Coimbatore facility means most orders leave within 72 hours — no waiting on an interstate transporter.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COLOURS -->
+<section class="colours" id="colours">
+  <div class="shell">
+    <div class="sec-head" data-aos="fade-up">
+      <div class="label">Colour-Coated Range</div>
+      <h2>Eight popular shades</h2>
+      <p>Full colour card runs to 40+ shades. Request a physical sample card before you commit.</p>
+    </div>
+    <div class="swatches" data-aos="fade-up" data-aos-delay="100">
+      <div class="swatch"><div class="swatch__chip" style="background:#2e4550"></div><div class="swatch__label"><strong>Ocean Blue</strong><span>#2E4550</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#8a2e20"></div><div class="swatch__label"><strong>Brick Red</strong><span>#8A2E20</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#5c6a6e"></div><div class="swatch__label"><strong>Slate Grey</strong><span>#5C6A6E</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#e9e6db;border-bottom:1px solid #ddd"></div><div class="swatch__label"><strong>Ivory White</strong><span>#E9E6DB</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#3b5c3f"></div><div class="swatch__label"><strong>Forest Green</strong><span>#3B5C3F</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#26303a"></div><div class="swatch__label"><strong>Charcoal</strong><span>#26303A</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#b3502b"></div><div class="swatch__label"><strong>Terracotta</strong><span>#B3502B</span></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#a9aeae"></div><div class="swatch__label"><strong>Silver Grey</strong><span>#A9AEAE</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY PREVIEW -->
+<section class="gallery-preview" id="gallery-preview">
+  <div class="shell">
+    <div class="sec-head sec-head--center" data-aos="fade-up">
+      <div class="label">Our Work</div>
+      <h2>Recent installations</h2>
+      <p>A snapshot of roofing work we're proud to stand behind — from residential re-roofs to large-scale industrial sheds.</p>
+    </div>
+    <div class="gp__grid" data-aos="fade-up" data-aos-delay="100">
+      <div class="gp__item gp__item--tall"><img src="https://images.unsplash.com/photo-1678611074737-4861a05715dd?auto=format&fit=crop&w=700&q=85" alt="Industrial shed" /><div class="gp__item__overlay"><span class="gp__item__caption">Industrial Shed — Tiruppur</span></div></div>
+      <div class="gp__item gp__item--wide"><img src="https://images.unsplash.com/photo-1635958854453-214b7af60fb5?auto=format&fit=crop&w=1000&q=85" alt="Colour-coated panels" /><div class="gp__item__overlay"><span class="gp__item__caption">Colour-Coated Panels — Erode</span></div></div>
+      <div class="gp__item"><img src="https://images.unsplash.com/photo-1527576539890-dfa815648363?auto=format&fit=crop&w=500&q=85" alt="Modern architecture roof" /><div class="gp__item__overlay"><span class="gp__item__caption">Standing Seam — Ooty Villa</span></div></div>
+      <div class="gp__item"><img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=500&q=85" alt="Heritage roof" /><div class="gp__item__overlay"><span class="gp__item__caption">Heritage Bungalow — Coimbatore</span></div></div>
+      <div class="gp__item"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=500&q=85" alt="Commercial roofing" /><div class="gp__item__overlay"><span class="gp__item__caption">Commercial Complex — Pollachi</span></div></div>
+      <div class="gp__item"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=500&q=85" alt="Warehouse roof" /><div class="gp__item__overlay"><span class="gp__item__caption">Logistics Hub — Erode</span></div></div>
+      <div class="gp__item"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=500&q=85" alt="Roofing installation" /><div class="gp__item__overlay"><span class="gp__item__caption">New Shed — Pollachi</span></div></div>
+    </div>
+    <div class="gp__see-all" data-aos="fade-up"><a class="btn btn--ink" href="gallery.html">View Full Gallery <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi" id="testimonials">
+  <div class="shell">
+    <div class="sec-head sec-head--center" data-aos="fade-up">
+      <div class="label">Client Testimonials</div>
+      <h2>What our clients say</h2>
+    </div>
+    <div class="testi__grid" data-aos="fade-up" data-aos-delay="80">
+      <div class="testi__card"><div class="testi__stars">★★★★★</div><p class="testi__text">"We sent them our rafter lengths and the sheets arrived pre-cut — no site cutting, no wastage. The roof went up in a day and a half and the finish is excellent."</p><div class="testi__who"><div class="testi__avatar">R</div><div><strong>Rajesh Menon</strong><span>Homeowner, Kozhikode</span></div></div></div>
+      <div class="testi__card"><div class="testi__stars">★★★★★</div><p class="testi__text">"Their trade pricing and turnaround are the reason we've stopped shopping orders around. Three large sheds this year — same line every time, zero surprises."</p><div class="testi__who"><div class="testi__avatar">S</div><div><strong>Sabira K.</strong><span>Contractor, Malappuram</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND — warm cream, NO black -->
+<section class="cta-band">
+  <div class="shell cta-band__inner">
+    <div data-aos="fade-right">
+      <h2>Tell us the roof. We'll send a quote.</h2>
+      <p>Share your roof type and approximate area — we usually respond within one working day with a detailed quote and a recommended product.</p>
+    </div>
+    <div class="cta-band__actions" data-aos="fade-left" data-aos-delay="100">
+      <a class="btn btn--gold" href="enquiry.html">Go to Enquiry Form <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H7M17 7v10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="btn btn--outline" href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER — light/cream, NO black -->
+<footer>
+  <div class="shell">
+    <div class="ftr__top">
+      <div class="ftr__brand">
+        <strong>JK Roofs Craft</strong>
+        <span class="ftr__brand-sub">Premium Roofing Solutions</span>
+        <p>Steel roofing sheets, roll-formed in Coimbatore for homes, warehouses and everything between.</p>
+        <div class="ftr__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="ftr__col">
+        <h4>Products</h4>
+        <a href="index.html#products">Trapezoidal Pro</a>
+        <a href="index.html#products">Classic Corrugated</a>
+        <a href="index.html#products">Standing Seam</a>
+        <a href="index.html#products">Tile-Form</a>
+        <a href="index.html#products">ThermoShield Panel</a>
+      </div>
+      <div class="ftr__col">
+        <h4>Company</h4>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#solutions">Solutions</a>
+        <a href="index.html#why">Why Us</a>
+        <a href="projects.html">Projects</a>
+        <a href="gallery.html">Gallery</a>
+      </div>
+      <div class="ftr__col">
+        <h4>Contact</h4>
+        <div class="ftr__contact-item"><i class="fas fa-phone-alt"></i><a href="tel:+919876543210">+91 98765 43210</a></div>
+        <div class="ftr__contact-item"><i class="fas fa-envelope"></i><a href="mailto:hello@jkroofscraft.in">hello@jkroofscraft.in</a></div>
+        <div class="ftr__contact-item"><i class="fas fa-map-marker-alt"></i><span>4/693-7, Perumal Kovil Street, Iruttuppallam, Coimbatore, TN 641114</span></div>
+        <a href="enquiry.html" style="margin-top:6px;color:var(--gold);font-weight:700;font-size:13.5px;display:inline-block;">Send an Enquiry →</a>
+      </div>
+    </div>
+    <div class="ftr__bottom">
+      <span>© 2026 JK Roofs Craft. All rights reserved.</span>
+      <span>Designed with precision for excellence.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({once:true,offset:60,duration:750});
+
+  /* Nav scroll shadow */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 60), {passive:true});
+
+  /* Mobile menu */
+  const toggle = document.getElementById('navToggle');
+  const sheet = document.getElementById('navSheet');
+  toggle.addEventListener('click', () => {
+    const o = sheet.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(o));
+    document.body.style.overflow = o ? 'hidden' : '';
+  });
+  sheet.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    sheet.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }));
+
+  /* Hero image slideshow (right column) */
+  (function(){
+    const slides = [...document.querySelectorAll('.hero__slide-img')];
+    const dots = [...document.querySelectorAll('.hero__dot')];
+    const contents = [
+      {label:'Premium Roofing — Coimbatore', title:'Crafting Roofs Built to <em>Last Generations</em>', sub:'Premium colour-coated and galvanized steel roofing sheets — roll-formed to your exact specifications.'},
+      {label:'Industrial Strength', title:'Long-Span Roofing for <em>Every Scale</em>', sub:'Trapezoidal and insulated panels engineered to load, dispatched within 72 hours from our Coimbatore facility.'},
+      {label:'40+ Colour Shades', title:'A Roof That <em>Complements Your Build</em>', sub:'From ivory white to deep charcoal — sample our colour card on-site before committing to your final shade.'}
+    ];
+    let cur = 0, timer;
+    function goTo(i) {
+      slides[cur].classList.remove('is-active');
+      dots[cur].classList.remove('is-active');
+      cur = (i + slides.length) % slides.length;
+      slides[cur].classList.add('is-active');
+      dots[cur].classList.add('is-active');
+      const c = contents[cur];
+      document.getElementById('heroLabel').textContent = c.label;
+      document.getElementById('heroTitle').innerHTML = c.title;
+      document.getElementById('heroSub').textContent = c.sub;
+    }
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.slide); clearInterval(timer); timer = setInterval(() => goTo(cur + 1), 5500); }));
+    timer = setInterval(() => goTo(cur + 1), 5500);
+  })();
+
+  /* Animated counters */
+  function animCount(el, target, dur) {
+    const s = performance.now();
+    (function update(now) {
+      const p = Math.min((now - s) / dur, 1);
+      el.textContent = Math.round(p * target);
+      if (p < 1) requestAnimationFrame(update);
+    })(performance.now());
+  }
+  // Animate hero stats immediately
+  setTimeout(() => {
+    document.querySelectorAll('.count').forEach(el => {
+      el.textContent = '0'; // reset to 0 right before animating
+      animCount(el, +el.dataset.target, 2000);
+    });
+  }, 300); // slight delay for visual effect
+
+  // Animate lower stats on scroll
+  let statsCounted = false;
+  const statsSec = document.getElementById('stats');
+  if(statsSec) {
+    new IntersectionObserver(entries => {
+      if (!statsCounted && entries.some(e => e.isIntersecting)) {
+        statsCounted = true;
+        document.querySelectorAll('.count-stat').forEach(el => {
+          el.textContent = '0';
+          animCount(el, +el.dataset.target, 2000);
+        });
+      }
+    }, {threshold:0.3}).observe(statsSec);
+  }
+</script>
+</body>
+</html>

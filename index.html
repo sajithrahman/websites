@@ -92,7 +92,7 @@ section{position:relative;}
 .topbar__left{display:flex;align-items:center;gap:20px;color:var(--ink-soft);}
 .topbar__right{display:flex;align-items:center;gap:14px;}
 .topbar__right a{font-size:14px;color:var(--ink-mid);}
-@media(max-width:640px){.topbar__left span:nth-child(2){display:none;}}
+@media(max-width:640px){.topbar__left span:nth-child(2){display:none;} .topbar__inner{justify-content:center;}}
 
 /* ======= NAV (pure white) ======= */
 .nav{
@@ -123,11 +123,8 @@ section{position:relative;}
 .nav__phone-wrap a:hover{color:var(--gold);}
 .nav__toggle{display:none;padding:8px;color:var(--ink);border-radius:6px;}
 .nav__toggle:hover{background:var(--cream-2);}
-@media(max-width:960px){
-  .nav__links,.nav__actions .nav__phone-wrap{display:none;}
-  .nav__toggle{display:inline-flex;}
-}
-.nav__sheet{display:none;flex-direction:column;padding:10px var(--gutter) 22px;background:#fff;border-bottom:1px solid var(--border);}
+@media(max-width:960px){ .nav__links,.nav__actions{display:none;} .nav__toggle{display:inline-flex;} .nav__inner{justify-content:space-between;gap:0;} }
+.nav__sheet{display:none;flex-direction:column;padding:10px var(--gutter) 22px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);position:absolute;top:100%;left:0;right:0;box-shadow:0 12px 30px rgba(0,0,0,0.08);}
 .nav__sheet.is-open{display:flex;}
 .nav__sheet a{padding:14px 0;font-size:16px;font-weight:500;border-bottom:1px solid var(--border);color:var(--ink);}
 .nav__sheet a:hover{color:var(--gold);}
@@ -449,8 +446,12 @@ footer{background:var(--cream-2);color:var(--ink-mid);padding-block:60px 28px;bo
 @media(max-width:540px){
   .products__grid{grid-template-columns:1fr;}
   .ftr__top{grid-template-columns:1fr;}
-  .stats__grid{grid-template-columns:1fr 1fr;}
+  .stats__grid{grid-template-columns:1fr;}
   .gp__grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:640px){
+  .hero__stats{display:grid;grid-template-columns:1fr 1fr;gap:24px 12px;}
+  .hero__title{font-size:clamp(2.4rem, 8vw, 3rem);}
 }
 </style>
 </head>
